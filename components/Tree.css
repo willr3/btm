@@ -1,0 +1,33 @@
+/*** Column ***/
+@import "../public/styles/colors.css";
+
+.tree{
+
+}
+.branch {
+
+}
+.prefix {
+
+}
+.frame {
+
+}
+.highlightedColor {
+  color: red
+}
+.selected {
+  text-decoration: underline;
+}
+.nodeToken {
+  cursor: pointer;
+}
+.package {
+  color: $greyFontColor;
+}
+.class {
+
+}
+.method {
+
+}

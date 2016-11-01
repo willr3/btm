@@ -1,0 +1,22 @@
+/*** Shell ***/
+@import "../public/styles/colors.css";
+
+.shell {
+  position: relative;
+  height:100%;
+  width:100%;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  outline: none;
+  
+}

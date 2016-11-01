@@ -1,0 +1,11 @@
+//documentation of the shape of the redux store
+{
+  "summary" : {
+    "runId" : {"isLoading" : true},
+    "runId" : [{
+      "stackUid" : "stackUid",
+      "threadCounts" : { "#" : 0}
+    }]
+  }
+
+}

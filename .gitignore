@@ -1,0 +1,7 @@
+node_modules/*
+public/build/*
+npm-debug.log
+log.txt
+config.json
+pouch/log.txt
+pouch/db/*

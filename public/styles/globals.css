@@ -1,0 +1,57 @@
+
+html {
+  font-family: RobotoDraft, Roboto, sans-serif;
+}
+body {
+  margin:0;
+}
+#app {
+  position:absolute;
+  top:0;
+  botom:0;
+  left:0;
+  right:0;
+  overflow: auto;
+}
+td {
+  border-bottom: 1px solid #ccc;
+}
+/*tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}*/
+
+::-webkit-scrollbar {
+  overflow: visible;
+}
+::-webkit-scrollbar:vertical {
+  height: 16px;
+  width: 6px;
+}
+  ::-webkit-scrollbar:horizontal {
+  width: 16px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 0px 1px 0px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,0.07);
+}
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+  background: rgba(0, 0, 0, 0.1);
+}
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}

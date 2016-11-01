@@ -1,0 +1,34 @@
+/***  template values ***/
+/** based on google cloud  **/
+
+$blue: #3b78e7;
+$red: #db4437;
+$green: #00c752;
+$yellow: #f4b400;
+$blueBackground: #3b78ff;
+$blueBorder: #0d55cb;
+$darkBlueBorder: #0b47aa;
+
+$fontColor: rgba(0, 0, 0, 0.54);
+$greyFontColor: #8d8d8d;
+$darkFontColor: rgba(0, 0, 0, 0.87);
+
+$lightIconColor: #cccccc;
+$darkIconColor: #616161;
+
+$lightShadowColor: rgba(0, 0, 0, 0.12);
+$mediumShadowColor: rgba(0, 0, 0, 0.14);
+$shadowColor: rgba(0, 0, 0, 0.2);
+
+$lightBackgroundColor: #fafafa;
+$hoverBackgroundColor: rgba(158, 158, 158, 0.2);
+$darkBackgroundColor: #ededed;
+$backgroundHoverDarker: rgba(0, 0, 0, 0.05);
+
+$thinBorderColor: #d3d3d3;
+$divideBorderColor: #e7e7e7;
+$lightBorderColor: #bbb;
+$hoverBoderColor: #ccc;
+
+$lightOpacity: .72;
+$hoverOpacity: 1;
