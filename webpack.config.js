@@ -18,7 +18,7 @@ var config = {
     // For hot style updates
     'webpack/hot/dev-server',
     // The script refreshing the browser on none hot updates
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:3030',
     // Our application
     mainPath],
   output: {
@@ -100,7 +100,7 @@ if(isProduction){
   console.log("Webpack production");
   config.devtool='source-map'
   config.entry.shift();//webpack/hot/dev-server
-  config.entry.shift();//webpack-dev-server/client?http://localhost:8080
+  config.entry.shift();//webpack-dev-server/client?http://localhost:3030
   config.plugins.shift();//Webpack.HotModuleReplacementPlugin()
   console.log("  entry="+config.entry);
 }
