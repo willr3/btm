@@ -30,7 +30,9 @@ var readJson = function(pathname){
     })
 };
 var getDb = function(name){
+
   if(!promises[name]){
+
     var dbPath = path.resolve(basePath,name,"allData.json");
     promises[name]= Promise.all([
       readJson(path.resolve(dbPath))])
@@ -38,38 +40,45 @@ var getDb = function(name){
 
         var allData = all[0]
         try{
-        allData.frameToStack={}
-        allData.stackToSet={}
-        allData.frames.forEach(function (frame,index){
-          frames[index]=frame;
-        })
-        allData.classNames.forEach(function(className,index){
-          classes[index]=className;
-        })
-        Object.keys(allData.stacks).forEach(function(index){
-          var stack = allData.stacks[index];
-          stacks[index]=stack;
-          stack.frames.forEach(function(frameId,frameIndex){
-            if(!allData.frameToStack[frameId]){
-              allData.frameToStack[frameId]={}
-            }
-              allData.frameToStack[frameId][stack.uid]=frameIndex;
+          allData.frameToStack={}
+          allData.stackToSet={}
+          allData.frames.forEach(function (frame,index){
+            frames[index]=frame;
+          })
 
+          allData.classNames.forEach(function(className,index){
+            classes[index]=className;
           })
-        })
-        Object.keys(allData.stackSets).forEach(function(index){
-          var stackSet = allData.stackSets[index];
-          stackSets[index]=stackSet;
-          stackSet.stacks.forEach(function(stackUid,stackIndex){
-            if(!allData.stackToSet[stackUid]){
-              allData.stackToSet[stackUid]={}
-            }
-            allData.stackToSet[stackUid][stackSet.uid]=stackIndex;
+
+          Object.keys(allData.stacks).forEach(function(index){
+            var stack = allData.stacks[index];
+            stacks[index]=stack;
+            stack.frames.forEach(function(frameId,frameIndex){
+              if(!allData.frameToStack[frameId]){
+                allData.frameToStack[frameId]={}
+              }
+                allData.frameToStack[frameId][stack.uid]=frameIndex;
+
+            })
           })
+
+          Object.keys(allData.stackSets).forEach(function(index){
+            var stackSet = allData.stackSets[index];
+            stackSets[index]=stackSet;
+            stackSet.stacks.forEach(function(stackUid,stackIndex){
+              if(!allData.stackToSet[stackUid]){
+                allData.stackToSet[stackUid]={}
+              }
+              allData.stackToSet[stackUid][stackSet.uid]=stackIndex;
+            })
+          })
+
+        }catch(Ex){console.log(Ex)}
+          return allData;
+        },function(err){
+          console.log("getDb("+name+") error ");
+          console.log(err);
         })
-      }catch(Ex){console.log(Ex)}
-        return allData;
-      })
   }
   return promises[name];
 };
